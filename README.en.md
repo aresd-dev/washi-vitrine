@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="README.md">Português</a> ·
+  <a href="ARCHITECTURE.en.md"><b>Architecture</b></a> ·
   Personal project · Windows · Source in a private repository
 </p>
 
@@ -73,6 +74,10 @@ flowchart LR
     Shell -- "starts and supervises" --> Core
 ```
 
+➡️ **[Architecture in depth](ARCHITECTURE.en.md)** — on-disk data format, how writes
+survive power loss, the ✓ recognition step by step, security, and the trade-offs behind
+each choice.
+
 ## Quality
 
 | Layer | How it is verified |
@@ -101,6 +106,6 @@ The source code is in a private repository — happy to walk through it in an in
 
 ## Contact
 
-**[Your name]** · [LinkedIn](https://www.linkedin.com/in/your-profile) · [e-mail](mailto:you@example.com)
+**Ares** · [LinkedIn](https://www.linkedin.com/in/aresd-dev) · [aresd.dev@gmail.com](mailto:aresd.dev@gmail.com)
 
-<sub>© 2026 [Your name]. Images and text on this page: all rights reserved.</sub>
+<sub>© 2026 Ares. Images and text on this page: all rights reserved.</sub>

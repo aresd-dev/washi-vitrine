@@ -11,6 +11,7 @@
 
 <p align="center">
   <a href="README.en.md">English</a> ·
+  <a href="ARQUITETURA.md"><b>Arquitetura</b></a> ·
   Projeto pessoal · Windows · Código em repositório privado
 </p>
 
@@ -73,6 +74,10 @@ flowchart LR
     Shell -- "inicia e vigia" --> Core
 ```
 
+➡️ **[Arquitetura em detalhe](ARQUITETURA.md)** — formato dos dados no disco, como a
+escrita resiste a quedas de energia, o reconhecimento do ✓ passo a passo, segurança e
+as renúncias de cada escolha.
+
 ## Qualidade
 
 | Camada | Como é verificada |
@@ -102,6 +107,6 @@ numa entrevista.
 
 ## Contato
 
-**[Seu nome]** · [LinkedIn](https://www.linkedin.com/in/seu-perfil) · [e-mail](mailto:voce@exemplo.com)
+**Ares** · [LinkedIn](https://www.linkedin.com/in/aresd-dev) · [aresd.dev@gmail.com](mailto:aresd.dev@gmail.com)
 
-<sub>© 2026 [Seu nome]. Imagens e texto desta página: todos os direitos reservados.</sub>
+<sub>© 2026 Ares. Imagens e texto desta página: todos os direitos reservados.</sub>
