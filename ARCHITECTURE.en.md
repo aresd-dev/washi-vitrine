@@ -249,11 +249,11 @@ Even offline, a local server is an open door on the machine. So:
 
 | Level | What it covers | Volume |
 |---|---|---|
-| Unit (core) | habit rules, persistence, crash recovery, recognizer, validation | 111 tests |
-| Unit (UI) | geometry (eraser, anchors, outline), camera | 25 tests |
+| Unit (core) | habit rules, persistence, crash recovery, recognizer, validation | 182 tests |
+| Unit (UI) | geometry (eraser, anchors, outline, connector routes, lasso), camera, grid | 147 tests |
 | Types and style | strict typing in Python and TypeScript, linting | every change |
 | Integration | real server starting and answering over HTTP | end-to-end script |
-| **Real browser** | a code-driven browser uses the UI like a person would | 32 checks |
+| **Real browser** | a code-driven browser uses the UI like a person would | 231 checks |
 | Packaged | the `.exe` itself is launched and used, with no dev tooling | per release |
 
 The "real browser" level was added after a lesson: with every unit test green, the app

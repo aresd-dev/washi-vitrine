@@ -252,11 +252,11 @@ Mesmo sem internet, um servidor local é uma porta aberta na máquina. Então:
 
 | Nível | O que cobre | Volume |
 |---|---|---|
-| Unitário (núcleo) | regras de hábito, persistência, recuperação após queda, reconhecedor, validação | 111 testes |
-| Unitário (interface) | geometria (borracha, âncoras, contorno), câmera | 25 testes |
+| Unitário (núcleo) | regras de hábito, persistência, recuperação após queda, reconhecedor, validação | 182 testes |
+| Unitário (interface) | geometria (borracha, âncoras, contorno, rotas dos conectores, laço), câmera, grade | 147 testes |
 | Tipos e estilo | tipagem estrita no Python e no TypeScript, lint | a cada mudança |
 | Integração | servidor real subindo e respondendo por HTTP | roteiro de ponta a ponta |
-| **Navegador real** | um navegador controlado por código usa a interface como uma pessoa | 32 verificações |
+| **Navegador real** | um navegador controlado por código usa a interface como uma pessoa | 231 verificações |
 | Empacotado | o próprio `.exe` é aberto e usado, sem ferramentas de desenvolvimento | por versão |
 
 O nível "navegador real" foi acrescentado depois de uma lição: com todos os testes
