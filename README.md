@@ -17,7 +17,7 @@
 
 ---
 
-![Mesa do Washi no tema claro](imagens/mesa-clara.png)
+![Mesa do Washi no tema escuro](imagens/mesa-escura.png)
 
 ## Por que existe
 
@@ -33,21 +33,35 @@ O Washi é a resposta: um quadro infinito onde tudo convive, com os dados em
 
 | | |
 |---|---|
-| **Hábitos com meta** | grade diária de quadradinhos, sequência (🔥), progresso e previsão de conclusão — "2× por dia até 100" calcula sozinho quando você termina |
+| **Hábitos com meta** | semana em tabela, sequência (🔥), progresso e previsão de conclusão — "2× por dia até 100" calcula sozinho quando você termina. Metas grandes agrupam: no máximo 5 quadradinhos por dia, cada um valendo 5, 10, 15… |
 | **Marcar com a caneta** | desenhar um ✓ sobre o quadradinho marca o hábito — o traço é reconhecido localmente |
 | **Kanban** | colunas com limite de trabalho em andamento, etiquetas, arrastar e soltar, teclado |
-| **Notas** | Markdown com rascunho salvo automaticamente |
-| **Quadro infinito** | caneta com pressão, marca-texto, borracha, formas, texto e setas que se prendem aos elementos e os acompanham |
+| **Notas** | Markdown com rascunho salvo automaticamente e listas de tarefas (☐) |
+| **Notas adesivas** | 16 cores; o texto se ajusta sozinho ao tamanho e fica claro sobre cores escuras |
+| **Quadro infinito** | zoom de 2% a 2000% com grade adaptativa, minimapa, "ajustar à tela" e um atalho para voltar ao início da mesa |
+| **Formas e conectores** | retângulo, elipse, losango e triângulo; setas presas aos elementos, em linha reta, curva ou cotovelo; barra flutuante com cor, preenchimento, duplicar e bloquear |
+| **Desenho à mão** | caneta com pressão, marca-texto, borracha e laço para selecionar à mão livre; o traço é simplificado ao salvar |
+| **Mapa mental** | nós que crescem com Tab/Enter, soltos na mesa junto com o resto |
+| **Desfazer e refazer** | Ctrl+Z, Ctrl+Shift+Z / Ctrl+Y |
 | **Busca** | encontra qualquer coisa no vault inteiro |
-| **Tema claro e escuro** | estética japonesa minimalista (*ma*, *wabi-sabi*) |
+| **Tema escuro e claro** | escuro neutro por padrão, à maneira de um roadmap; o vermelho fica só para estado (✓, foco, alerta) |
 
-![Formas, texto e setas conectadas](imagens/formas-e-conectores.png)
+![Formas e conectores em linha reta, curva e cotovelo](imagens/formas-e-conectores.png)
 
 <p align="center">
-  <img src="imagens/habitos.png" width="340" alt="Grade de hábitos">
+  <img src="imagens/habitos.png" width="340" alt="Tarefa com a semana em tabela">
   &nbsp;&nbsp;
-  <img src="imagens/mesa-escura.png" width="560" alt="Tema escuro">
+  <img src="imagens/notas-adesivas.png" width="560" alt="Notas adesivas com texto ajustado">
 </p>
+
+![Mesa do Washi no tema claro](imagens/mesa-clara.png)
+
+### Novidades da v0.2
+
+A versão 0.2 nasceu de um estudo de como o Miro se comporta (zoom, notas adesivas,
+conectores, desenho), trazido para a escala de um app pessoal: visual escuro neutro,
+barra de ferramentas lateral, quadro de 2% a 2000%, notas adesivas, novos conectores,
+laço, refazer e widgets com ícone e nome — cada parte coberta por testes antes de entrar.
 
 ## Decisões de engenharia
 
@@ -82,9 +96,9 @@ as renúncias de cada escolha.
 
 | Camada | Como é verificada |
 |---|---|
-| Núcleo | 111 testes automatizados, tipagem estrita, lint |
-| Interface | testes unitários de geometria e câmera, checagem de tipos |
-| **Uso real** | 32 verificações num navegador de verdade: desenha, apaga, conecta formas, arrasta widgets, marca hábito com a caneta e confere tela + disco |
+| Núcleo | 182 testes automatizados, tipagem estrita, lint |
+| Interface | 147 testes unitários (geometria, câmera, grade, conectores, laço, simplificação do traço), checagem de tipos |
+| **Uso real** | 231 verificações num navegador de verdade: desenha, apaga, conecta formas, arrasta widgets, dá zoom, seleciona com o laço, marca hábito com a caneta e confere tela + disco |
 | Empacotado | o instalador é testado abrindo o próprio `.exe`, sem ferramentas de desenvolvimento |
 
 O teste em navegador real foi a lição mais valiosa do projeto: ele encontrou falhas de
@@ -99,8 +113,9 @@ ruff · Vitest · Playwright
 
 ## Status
 
-Em uso pessoal. Possíveis próximos passos: sincronização opcional entre máquinas,
-exportação do quadro como imagem e calibração do reconhecimento com dados reais de caneta.
+Em uso pessoal, na versão 0.2. Próximos passos planejados: frames e modo apresentação,
+anotações, imagens e emojis no quadro, sincronização opcional entre máquinas e calibração
+do reconhecimento com dados reais de caneta.
 
 O código-fonte fica em repositório privado — posso mostrar e conversar sobre ele
 numa entrevista.

@@ -17,7 +17,7 @@
 
 ---
 
-![Washi desk, light theme](imagens/mesa-clara.png)
+![Washi desk, dark theme](imagens/mesa-escura.png)
 
 ## Why
 
@@ -33,21 +33,35 @@ your own machine** (Markdown, JSON) — readable and yours.
 
 | | |
 |---|---|
-| **Goal-based habits** | daily check grid, streaks, progress and projected finish date — "2× a day until 100" works out the schedule for you |
+| **Goal-based habits** | the week as a table, streaks, progress and projected finish date — "2× a day until 100" works out the schedule for you. Big goals group up: at most 5 cells a day, each worth 5, 10, 15… |
 | **Check with a pen** | drawing a ✓ over a cell marks the habit — the stroke is recognized locally |
 | **Kanban** | WIP limits, tags, drag and drop, keyboard support |
-| **Notes** | Markdown with autosaved drafts |
-| **Infinite canvas** | pressure-sensitive pen, highlighter, eraser, shapes, text and arrows that bind to elements and follow them |
+| **Notes** | Markdown with autosaved drafts and task lists (☐) |
+| **Sticky notes** | 16 colors; text auto-fits the note and turns light on dark colors |
+| **Infinite canvas** | zoom from 2% to 2000% with an adaptive grid, minimap, "fit to screen" and a shortcut back to the start of the board |
+| **Shapes and connectors** | rectangle, ellipse, diamond and triangle; arrows bound to elements as straight, curved or elbow lines; floating toolbar with color, fill, duplicate and lock |
+| **Freehand** | pressure-sensitive pen, highlighter, eraser and a lasso for freeform selection; strokes are simplified on save |
+| **Mind map** | nodes that grow with Tab/Enter, living on the board with everything else |
+| **Undo and redo** | Ctrl+Z, Ctrl+Shift+Z / Ctrl+Y |
 | **Search** | finds anything across the whole vault |
-| **Light and dark themes** | minimalist Japanese aesthetic (*ma*, *wabi-sabi*) |
+| **Dark and light themes** | neutral dark by default, roadmap-style; red is reserved for state (✓, focus, alerts) |
 
-![Shapes, text and bound arrows](imagens/formas-e-conectores.png)
+![Shapes and connectors: straight, curved and elbow](imagens/formas-e-conectores.png)
 
 <p align="center">
-  <img src="imagens/habitos.png" width="340" alt="Habit grid">
+  <img src="imagens/habitos.png" width="340" alt="Task with the week as a table">
   &nbsp;&nbsp;
-  <img src="imagens/mesa-escura.png" width="560" alt="Dark theme">
+  <img src="imagens/notas-adesivas.png" width="560" alt="Sticky notes with auto-fitted text">
 </p>
+
+![Washi desk, light theme](imagens/mesa-clara.png)
+
+### What's new in v0.2
+
+Version 0.2 came from studying how Miro behaves (zoom, sticky notes, connectors,
+drawing), scaled down to a personal app: a neutral dark look, a side toolbar, a
+2%–2000% canvas, sticky notes, new connectors, lasso, redo and widgets with an icon and
+a name — each piece covered by tests before it landed.
 
 ## Engineering decisions
 
@@ -82,9 +96,9 @@ each choice.
 
 | Layer | How it is verified |
 |---|---|
-| Core | 111 automated tests, strict typing, linting |
-| UI | unit tests for geometry and camera, type checking |
-| **Real usage** | 32 checks in a real browser: draws, erases, connects shapes, drags widgets, checks a habit with the pen and verifies screen + disk |
+| Core | 182 automated tests, strict typing, linting |
+| UI | 147 unit tests (geometry, camera, grid, connectors, lasso, stroke simplification), type checking |
+| **Real usage** | 231 checks in a real browser: draws, erases, connects shapes, drags widgets, zooms, lasso-selects, checks a habit with the pen and verifies screen + disk |
 | Packaged | the installer is tested by launching the `.exe` itself, with no dev tooling |
 
 Real-browser testing was the most valuable lesson of the project: it caught interaction
@@ -99,8 +113,9 @@ ruff · Vitest · Playwright
 
 ## Status
 
-In personal use. Possible next steps: optional sync between machines, exporting the
-board as an image, and tuning recognition with real pen data.
+In personal use, at version 0.2. Planned next steps: frames and presentation mode,
+annotations, images and emoji on the board, optional sync between machines, and tuning
+recognition with real pen data.
 
 The source code is in a private repository — happy to walk through it in an interview.
 
